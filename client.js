@@ -10,13 +10,13 @@ const connect = function() {
 
   conn.on('connect', () => {
     conn.write('Name: MIR');
-    setTimeout(() => {
-      conn.write("Move: up");
-    }, 500);
+    // setTimeout(() => {
+    //   conn.write("Move: up");
+    // }, 500);
 
-    setInterval(() => {
-      conn.write("Move: left");
-    }, 50);
+    // setInterval(() => {
+    //   conn.write("Move: left");
+    // }, 50);
 
 
     console.log('Successfully connected to game server');
@@ -30,4 +30,6 @@ const connect = function() {
   return conn;
 };
 
-module.exports = connect;
+module.exports = {
+  connect
+};
